@@ -1,0 +1,23 @@
+<h2 style="color:blue;">Listado de productos</h2>
+<br>
+<div class="jumbotron" id="listadoProductos">
+    {{#if productos}}
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: yellow;"> <th>ID</th> <th>Titulo</th> <th>Precio</th> <th>Imagen</th></tr>
+            <ul>
+                {{#each productos}}
+                    <tr>
+                        <td>{{this.id}}</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.price}}</td>
+                        <td><img src="{{this.thumbnail}}" height="50px" width="50px" alt="Imagen no disponible"></td>
+                    </tr>
+                {{/each}}
+            </ul>
+        </table>
+    </div>
+    {{else}}
+        <h3 class="alert alert-warning">No hay productos</h3>
+    {{/if}}
+</div>

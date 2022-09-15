@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="mt-5">
+        <h3>Centro de Mensajes</h3>
+        <div class="form-group">
+            <label for="mail">Mail:</label>
+            <input type="email" class="form-control" id="autor" aria-describedby="Autor">
+            <small id="Autor" class="form-text text-muted">Mail del autor del mensaje</small>
+        </div>
+        <div class="form-group">
+            <label for="contenidoMensaje">Mensaje:</label>
+            <textarea class="form-control" id="contenidoMensaje" rows="3"></textarea>
+        </div>
+        <button onclick="enviarMensaje()" class="btn btn-primary">Enviar</button>
+    </div>
+    <hr>
+    <div id="Historial"></div>
+</div>
