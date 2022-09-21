@@ -1,9 +1,8 @@
 const knex = require('knex');
-const { db } = require('../utils/config.js');
 
 class ContenedorSQL {
 
-    constructor(nombreTabla){
+    constructor(nombreTabla, db){
         this.knexCli = knex(db);
         this.nombreTabla = nombreTabla;
     }

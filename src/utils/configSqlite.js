@@ -1,6 +1,6 @@
 const path = require('path');
 
-const config = {
+const configSqlite = {
     db: {
         client: 'better-sqlite3',
         connection: {
@@ -10,4 +10,4 @@ const config = {
     }
 }
 
-module.exports = config;
+module.exports = configSqlite;

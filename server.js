@@ -10,10 +10,12 @@ const ContenedorSql = require("./src/Container/ContenedorSQL");
 const app = express();
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
+const { configSqlite } = require('./src/utils/configSqlite.js');
+const { configMariaDb } = require('./src/utils/configMariaDb.js')
 
 /* ---------------------- Base de datos ---------------------- */
-const contenedorMensajes = new ContenedorSql('mensajes');
-const contenedorProductos = new ContenedorSql("productos");
+const contenedorMensajes = new ContenedorSql('mensajes', configSqlite);
+const contenedorProductos = new ContenedorSql("productos", configMariaDb);
 
 /* ---------------------- Middlewares ---------------------- */
 app.use(express.static('public'));

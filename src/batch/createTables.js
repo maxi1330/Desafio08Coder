@@ -1,5 +1,5 @@
 const knex = require('knex');
-const { db } = require('../utils/config.js');
+const { db } = require('../utils/configSqlite.js');
 
 const knexCli = knex(db);
 
